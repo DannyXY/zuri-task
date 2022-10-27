@@ -7,7 +7,7 @@ const data = {
   slackUsername: "dannyx",
   backend: true,
   age: 19,
-  bio: "Quick learner, interested in new things",
+  bio: "Adewambe Daniel, Quick learner, interested in new things",
 };
 
 server.use(cors());
