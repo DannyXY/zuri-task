@@ -8,14 +8,19 @@ var server = http.createServer(function (req, res) {
     age: 19,
     bio: "Quick learner, interested in new things",
   };
-  if (req.url == "/details") {
-    res.writeHead(200, { "Content-type": "application/json" });
-    res.write(JSON.stringify(data));
+  if (req.method == "GET") {
+    if (req.url == "/details") {
+      res.writeHead(200, { "Content-type": "application/json" });
+      res.write(JSON.stringify(data));
 
-    res.end();
+      res.end();
+    } else {
+      res.end("we're not fully scaled at the moment");
+    }
   } else {
-    res.end("we're not fully scaled at the moment");
+    res.end("this method isn't allowed for this route");
   }
+
 });
 
 server.listen(process.env.PORT);
