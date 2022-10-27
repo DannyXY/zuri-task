@@ -1,4 +1,4 @@
 To start up the server, run:
 ```bash
-node server.ts
+node server.js
 ```
